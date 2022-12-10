@@ -1,0 +1,538 @@
+@\import "https://DelterosMALDesign.github.io/core.css";
+@\import "https://DelterosMALDesign.github.io/hover.css";
+@\import "https://DelterosMALDesign.github.io/placeholder.css";
+
+
+
+
+/*-S-T-A-R-T--------------------*\
+| Banner Titles   |
+\*------------------------------*/
+
+body[data-query*='status":7'] { --name: "Monogatari Series"; 
+}
+body[data-query*='status":1'] { --name: "K-ON!"; 
+}
+body[data-query*='status":2']  { --name: "Madoka Magica"; 
+}
+body[data-query*='status":3'] { --name: "Hibike! Euphonium";
+}
+body[data-query*='status":4'] { --name: "Shingeki no Kyojin";
+}
+body[data-query*='status":6'] { --name: "JoJo's Bizarre Adventure";
+}
+
+
+
+/*-S-T-A-R-T--------------------*\
+| Per-Category Banner Background Image
+To change background images: delete what's in the parenthesis. Upload 
+the new background to Imgur or a similar site, then copy the direct link (or Original GIF link if it's animated) and paste it into the parenthesis. Save.
+|
+\*------------------------------*/
+
+/* All Anime */
+[data-query*='status":7'] { --banner: url(https://i.imgur.com/XRWUMPF.png); }
+/* Watching/Reading */
+[data-query*='status":1'] { --banner: url(https://i.imgur.com/NRvOoZD.png);}
+/* Completed */
+[data-query*='status":2'] { --banner: url(https://i.imgur.com/tUjh0LJ.jpg); }
+/* Onhold */
+[data-query*='status":3'] { --banner: url(https://i.imgur.com/fkEiWSX.jpg); }
+/* Dropped */
+[data-query*='status":4'] { --banner: url(https://i.imgur.com/3Pv1ODP.jpg); }
+/* Planned */
+[data-query*='status":6'] { --banner: url(https://i.imgur.com/YGvp4fV.jpg); }
+
+
+
+
+
+/*-S-T-A-R-T--------------------*\
+| Per-Category Banner Character (Render)
+Background size is the size of the image. 100% is full size. 
+
+The first percentage after background position is the position from the left. Lower percentages move it left and you can go negative. The second percentage is position from the top. Lower percentages move it down. 
+|
+\*------------------------------*/
+
+/* All Anime */
+
+[data-query*='status":7'] { --character: url(https://i.imgur.com/ByXEWym.png);
+}
+[data-query*='status":7'] #list-container #cover-image-container {
+    background-size: 0%;
+    background-position: 80% 20%;
+    
+}
+
+/* Watching/Reading */
+[data-query*='status":1'] { --character: url(https://i.imgur.com/zx7724A.png);
+}
+[data-query*='status":1'] #list-container #cover-image-container {
+    background-size: 0%;
+    background-position: 80% 10%;
+}
+/* Completed */
+[data-query*='status":2'] { --character: url(https://i.imgur.com/J0qRZa4.png);
+}    
+[data-query*='status":2'] #list-container #cover-image-container {
+    background-size: 0%;
+    background-position: 0% 10%;
+}
+/* Onhold */
+[data-query*='status":3'] { --character: url(https://i.imgur.com/b7Xr756.png);
+}
+    [data-query*='status":3'] #list-container #cover-image-container {
+    background-size: 0%;
+    background-position: 50% 10%;
+}
+/* Dropped */
+[data-query*='status":4'] { --character: url(https://i.imgur.com/b649yWM.png);
+}
+    [data-query*='status":4'] #list-container #cover-image-container {
+    background-size: 34%;
+    background-position: 100% 10%;
+}
+/* Planned */
+[data-query*='status":6'] { --character: url(https://i.imgur.com/77D1GHX.png);     
+}
+ [data-query*='status":6'] #list-container #cover-image-container {
+    background-size: 40%;
+    background-position: 100% 10%;
+}
+
+
+/*-S-T-A-R-T--------------------*\
+| Banner Avatar    |
+\*------------------------------*/
+
+body[data-query*='status":7']  { --avatar: url(https://i.imgur.com/XYkyTJu.jpg); }
+
+body[data-query*='status":1']  { --avatar: url(https://i.imgur.com/wbP7r5j.jpg); }
+
+body[data-query*='status":2']  { --avatar: url(https://i.imgur.com/1eFFQRY.png); }
+
+body[data-query*='status":3']  { --avatar: url(https://i.imgur.com/2BnRuZi.jpg); }
+
+body[data-query*='status":4']  { --avatar: url(https://i.imgur.com/reGy4lA.png); }
+
+body[data-query*='status":6']  { --avatar: url(https://i.imgur.com/hHb0srQ.png); }
+
+
+/*-S-T-A-R-T--------------------*\
+| Per-Category Background Image
+If you want a wallpaper on a category, you can add direct background images links to the parenthesis here for each category! By default, there is no wallpaper.
+
+|
+\*------------------------------*/
+
+/* All Anime */
+body[data-query*='status":7'] { --background: url(); }
+/* Watching/Reading */
+body[data-query*='status":1'] { --background: url(); }
+/* Completed */
+body[data-query*='status":2'] { --background: url(); }
+/* Onhold */
+body[data-query*='status":3'] { --background: url(); }
+/* Dropped */
+body[data-query*='status":4'] { --background: url(); }
+/* Planned */
+body[data-query*='status":6'] { --background: url(); }
+
+
+/*------------------------------*\
+| Character Renders R0.3         |
+\*------------------------------*/
+
+footer:before, footer:after {
+	content: "";
+	position: fixed;
+	top: 0;
+	z-index: -1;
+	
+	width: calc(50% - 538px);
+	min-width: 262px;
+	height: 100%;
+	background: transparent no-repeat center bottom / contain scroll;
+}
+
+
+/*------------------------------*\
+| List colors       |
+pbg is the color of the wallpaper when you have no image there
+
+bg is the color of the tables and rows
+
+text is the color of your anime
+titles and some text on your rows (numbers, score, information, tags)
+
+text-dim is other text on your rows (edit, more, non-links, Progress:, Rated:, etc)
+
+btn-bg is the button color around score and tags
+
+text-head is the category links unselected
+
+text-head-h is the current category link selected
+
+btn-head-bg-h is buttons under the header when selected
+
+btn-text-h is that button text
+
+banner-text is the banner text color, and its shadow color is under that
+
+Get a new HTML/Hex color number here, or use color names.
+https://htmlcolorcodes.com/
+
+Get new RGBA colors here for the rows
+https://cssgenerator.org/rgba-and-hex-color-generator.html
+\*------------------------------*/
+:root {
+
+    --pbg: #161616;
+    --bg: #212121;
+    --bg-dark: #444;
+    --text: #ababab;
+    --text-h: #ff8383;
+    --text-dim: #777;
+    --text-dim-h: #999;
+    --text-dark: #ababab;
+    --shadow: rgba(0,0,0,0.8);
+    --icon: #959595;
+    --accent: #ff8383;
+    --banner-text: #f6f5ff;
+    --banner-text-shadow: #1f0a28;
+    --btn-bg: #191919;
+    --btn-bg-h: #ababab;
+    --btn-head-bg-h: #ff8383;
+    --btn-text-h: #212121;
+    --text-head: #9b9b9b;
+    --text-head-h: #ababab;
+    --cover-bg: #090909;
+    --edit-btn: #323232;
+    --checkmark: #ff8383;
+}
+
+
+/*------------------------------*\
+| List colors       |
+status menu container is the color of the header under the banner when there is transparency on your tables, and the last codes control the rows on hover and the glow around them. Make a new box shadow here
+https://html-css-js.com/css/generator/box-shadow/
+\*------------------------------*/
+
+.status-menu-container{
+background: ; 
+}
+
+.list-table-data:hover{
+background: ; 
+box-shadow: ;
+
+}
+
+.data.tags {
+    width: 350px;
+}
+
+.list-table-data {
+    min-height: 158px;
+}
+
+.list-item {
+    border-radius: 15px;
+}
+
+.data.image {
+    width: auto;
+    height: auto;
+    margin: 4px 0 4px 8px;
+    order: 1;
+}
+
+.data.image img {
+    width: 78px!important;
+    height: 110.5px!important;
+    border: none!important;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.data.image a:after, .data.image img {
+    border-radius: 8px;
+}
+
+.data.number {
+    position: relative;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background: #121212;
+    border-radius: 15px;
+    margin: 0 0px 0 16px;
+    order: 1;
+    line-height: 32px;
+    font-weight: 100;
+    z-index: 1;
+}
+
+.list-item:nth-child(n+101) .data.number {
+    text-indent: 0px;
+}
+
+.data.status {
+    position: absolute;
+    top: auto;
+    left: 0;
+    width: 2px!important;
+    height: 104.5px;
+    padding: 3px!important;
+    border-radius: 15px;
+}
+
+.list-table .list-table-data .data.title .link {
+    font-size: 1.6em;
+    font-family: helvetica;
+}
+
+.data.type {
+    top: -13px;
+    height: 34px;
+    padding-left: 12px!important;
+}
+
+.list-table .list-table-data .data.title a.link.sort {
+    color: white !important;
+}
+
+.data.title .link.sort {
+    line-height: 26px;
+    padding-right: 1.8em;
+    top: 15.7px;
+}
+
+.data.title .link:hover {
+    text-decoration: underline !important;
+}
+
+.data.title {
+    line-height: 25px;
+    padding: 39px 0px 0px 8px !important;
+}
+
+/*SCORE COLOR*/
+.list-table .list-table-data .score .score-10 {
+    color: #ff0000 !important;
+}
+
+.list-table .list-table-data .score .score-9 {
+    color: #ff4343 !important;
+}
+
+.list-table .list-table-data .score .score-8 {
+    color: #ff8923 !important;
+}
+
+.list-table .list-table-data .score .score-7 {
+    color: #fbff18 !important;
+}
+
+.list-table .list-table-data .score .score-6 {
+    color: #19d05a !important;
+}
+
+.list-table .list-table-data .score .score-5 {
+    color: #2591ff !important;
+}
+
+.list-table .list-table-data .score .score-4 {
+    color: #6a58ff !important;
+}
+
+.list-table .list-table-data .score .score-3 {
+    color: #d247ff !important;
+}
+
+.list-table .list-table-data .score .score-2 {
+    color: #ff81a9 !important;
+}
+
+.list-table .list-table-data .score .score-1 {
+    color: #70503d !important;
+}
+/**/
+
+/*RANK COLOR*/
+/*complete*/
+.list-table .list-table-data .tags span:first-of-type a[href*="tag=S%2B"] {
+    color: #ff0000 !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href="?status=2&tag=S"] {
+    color: #ff4343 !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href*="tag=S-"] {
+    color: #ff5050 !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href*="tag=A%2B"] {
+    color: #ff8114 !important; 
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href="?status=2&tag=A"] {
+    color: #ff8923 !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href*="tag=A-"] {
+    color: #fbff18 !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href*="tag=B%2B"] {
+    color: #d1ff18 !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href="?status=2&tag=B"] {
+    color: #19d05a !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href*="tag=B-"] {
+    color: #19d073 !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href*="tag=C%2B"] {
+    color: #00a1ff !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href="?status=2&tag=C"] {
+    color: #2591ff !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href*="tag=C-"] {
+    color: #5b58ff !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href*="tag=D%2B"] {
+    color: #6a58ff !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href="?status=2&tag=D"] {
+    color: #d247ff !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href*="tag=D-"] {
+    color: #f447ff !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href*="tag=E"] {
+    color: #ff81a9 !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href*="tag=F"] {
+    color: #70503d !important;
+}
+/*complete*/
+
+/*currently watching*/
+.list-table .list-table-data .tags span:first-of-type a[href="?status=1&tag=S"] {
+    color: #ff4343 !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href="?status=1&tag=A"] {
+    color: #ff8923 !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href="?status=1&tag=B"] {
+    color: #19d05a !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href="?status=1&tag=C"] {
+    color: #2591ff !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href="?status=1&tag=D"] {
+    color: #d247ff !important;
+}
+/*currently watching*/
+
+/*All*/
+.list-table .list-table-data .tags span:first-of-type a[href="?status=7&tag=S"] {
+    color: #ff4343 !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href="?status=7&tag=A"] {
+    color: #ff8923 !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href="?status=7&tag=B"] {
+    color: #19d05a !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href="?status=7&tag=C"] {
+    color: #2591ff !important;
+}
+
+.list-table .list-table-data .tags span:first-of-type a[href="?status=7&tag=D"] {
+    color: #d247ff !important;
+}
+/*All*/
+/**/
+
+
+/*Score*/
+.list-table .list-table-data .data.score .link {
+    font-size: 1.6em;
+    font-family: helvetica;
+}
+
+.data.score a {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    line-height: 32px;
+    margin: 0 auto;
+}
+
+.data.score {
+    width: 30px;
+    height: 30px;
+}
+
+/**/
+
+.list-table .list-table-data .tags span:first-of-type a {
+    font-size: 16px !important;
+    line-height: 22px;
+    border-radius: 10px 10px 0 0;
+    padding-top: 7px;
+}
+
+.data.demographic a, .data.genre a, .data.licensor a, .data.studio a, .data.tags a:not(.edit) {
+    padding: 3px 6px;
+    border-radius: 0px;
+    font-size: 12.5px!important;
+    line-height: 17px;
+}
+
+.data.tags span:last-child a {
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 7px;
+}
+
+.data.tags span:only-child a {
+    border-radius: 10px !important;
+}
+
+/**/
+.status-menu-container .status-menu .status-button:after {
+    border-radius: 20px;
+}
+
+.data.tags a.edit {
+    border-radius: 15px;
+}
+
+/**/
+
+.data.image a:before {
+    content: none;
+}
